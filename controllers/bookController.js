@@ -86,7 +86,6 @@ exports.book_create_get = asyncHandler(async (req, res, next) => {
 exports.book_create_post = [
   // Convert the genre to an array.
   (req, res, next) => {
-    () => console.log(req.body.genre)
     if (!Array.isArray(req.body.genre)) {
       req.body.genre =
         typeof req.body.genre === "undefined" ? [] : [req.body.genre];
